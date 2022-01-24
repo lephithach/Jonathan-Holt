@@ -1,0 +1,57 @@
+.header {
+  padding: $paddingSection;
+  background-color: #ffaead;
+  margin-top: 2px;
+
+  .header-caption {
+    .header-title {
+      font-family: "Crimson Pro", sans-serif;
+      font-size: 8rem;
+      line-height: 0.9;
+      font-weight: 700;
+
+      strong {
+        color: #fff;
+      }
+    }
+
+    .header-content {
+      font-family: "Open Sans", sans-serif;
+      line-height: 2.1;
+      margin: 3rem 0;
+    }
+
+    .button {
+      font-family: "Open Sans", sans-serif;
+      padding: 1rem 2rem;
+      background-color: #000;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.25s ease-in-out;
+      font-weight: 700;
+      letter-spacing: 3px;
+
+      &:hover {
+        background-color: #04490b;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    padding: $paddingSection576px;
+    background-color: #ffaead;
+    margin-top: 2px;
+
+    .header-caption {
+      .header-title {
+        font-size: 4rem;
+      }
+    }
+
+    img {
+      margin-top: 3rem;
+    }
+  }
+}

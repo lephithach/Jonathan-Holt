@@ -1,0 +1,75 @@
+.section-social {
+  padding: $paddingSection;
+
+  .social-header {
+    font-family: "Crimson Pro", sans-serif;
+    color: #000;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  p {
+    text-align: center;
+    line-height: 2;
+
+    a {
+      color: #1caeb5;
+    }
+  }
+
+  .social-group {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+
+    img {
+      width: 50%;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 1.4rem;
+      font-family: "Crimson Pro", sans-serif;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-social {
+    padding: $paddingSection576px;
+
+    .social-header {
+      font-family: "Crimson Pro", sans-serif;
+      color: #000;
+      font-size: 4rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    p {
+      text-align: center;
+      line-height: 2;
+
+      a {
+        color: #1caeb5;
+      }
+    }
+
+    .social-group {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+
+      img {
+        width: 40%;
+      }
+
+      p {
+        font-weight: 700;
+        font-size: 1.4rem;
+        font-family: "Crimson Pro", sans-serif;
+      }
+    }
+  }
+}

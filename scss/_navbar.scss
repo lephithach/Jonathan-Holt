@@ -1,0 +1,97 @@
+.navbar-container {
+  height: 143px;
+  box-shadow: 1px 1px 3px #000;
+  font-size: 1.2rem;
+
+  .brand {
+    height: 100%;
+
+    .logo-brand {
+      max-width: 100px;
+    }
+
+    .brand-name {
+      font-family: "Crimson Pro", sans-serif;
+      font-weight: 400;
+    }
+
+    .button-navbar-mobile {
+      display: none;
+    }
+  }
+
+  .navbar-list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+
+    .navbar-item {
+      list-style-type: none;
+
+      .navbar-link {
+        display: block;
+        padding: 1rem 1.3rem;
+        letter-spacing: 5px;
+      }
+    }
+  }
+}
+
+@keyframes showNavbar {
+  from {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-container {
+    position: relative;
+  }
+
+  .navbar-list {
+    font-size: 14px;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-container {
+    position: relative;
+
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+
+      .button-navbar-mobile {
+        display: block;
+        font-size: 2rem;
+      }
+    }
+
+    .navbar-list {
+      height: auto;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background-color: #fff;
+      transform: translateX(-200%);
+    }
+
+    .show {
+      animation: showNavbar 0.25s ease-in-out;
+      transform: translateX(0);
+    }
+  }
+}

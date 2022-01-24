@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-container {
+  height: 143px;
+  box-shadow: 1px 1px 3px #000;
+  font-size: 1.2rem;
+}
+.navbar-container .brand {
+  height: 100%;
+}
+.navbar-container .brand .logo-brand {
+  max-width: 100px;
+}
+.navbar-container .brand .brand-name {
+  font-family: "Crimson Pro", sans-serif;
+  font-weight: 400;
+}
+.navbar-container .brand .button-navbar-mobile {
+  display: none;
+}
+.navbar-container .navbar-list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+.navbar-container .navbar-list .navbar-item {
+  list-style-type: none;
+}
+.navbar-container .navbar-list .navbar-item .navbar-link {
+  display: block;
+  padding: 1rem 1.3rem;
+  letter-spacing: 5px;
+}
+
+@keyframes showNavbar {
+  from {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 576px) {
+  .navbar-container {
+    position: relative;
+  }
+
+  .navbar-list {
+    font-size: 14px;
+    padding-left: 1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .navbar-container {
+    position: relative;
+  }
+  .navbar-container .brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  .navbar-container .brand .button-navbar-mobile {
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar-container .navbar-list {
+    height: auto;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #fff;
+    transform: translateX(-200%);
+  }
+  .navbar-container .show {
+    animation: showNavbar 0.25s ease-in-out;
+    transform: translateX(0);
+  }
+}
+.header {
+  padding: 4rem;
+  background-color: #ffaead;
+  margin-top: 2px;
+}
+.header .header-caption .header-title {
+  font-family: "Crimson Pro", sans-serif;
+  font-size: 8rem;
+  line-height: 0.9;
+  font-weight: 700;
+}
+.header .header-caption .header-title strong {
+  color: #fff;
+}
+.header .header-caption .header-content {
+  font-family: "Open Sans", sans-serif;
+  line-height: 2.1;
+  margin: 3rem 0;
+}
+.header .header-caption .button {
+  font-family: "Open Sans", sans-serif;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.25s ease-in-out;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.header .header-caption .button:hover {
+  background-color: #04490b;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    padding: 1rem;
+    background-color: #ffaead;
+    margin-top: 2px;
+  }
+  .header .header-caption .header-title {
+    font-size: 4rem;
+  }
+  .header img {
+    margin-top: 3rem;
+  }
+}
+.section-project {
+  padding: 4rem 3rem;
+}
+.section-project .title {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: "Crimson Pro", sans-serif;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-project .card {
+  border: none;
+  padding: 0 1rem;
+}
+.section-project .card .card-img {
+  width: 100%;
+}
+.section-project .card .card-title {
+  font-family: "Crimson Pro", sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  margin-top: 2.5rem;
+}
+.section-project .card .card-description {
+  font-weight: 300;
+}
+.section-project .card .card-content {
+  line-height: 2;
+  margin: 2rem 0;
+}
+.section-project .card .card-button {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 1rem;
+  max-width: 50%;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.25s ease-in-out;
+}
+.section-project .card .card-button:hover {
+  background-color: #033b07;
+}
+.section-project .card .card-show-more {
+  margin-top: 2rem;
+  font-weight: 300;
+  text-decoration: solid;
+}
+
+@media screen and (max-width: 576px) {
+  .section-project {
+    padding: 1rem;
+  }
+  .section-project .title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  .section-project .card {
+    padding: 0;
+    margin-top: 1rem;
+  }
+  .section-project .card .card-img {
+    width: 100%;
+  }
+  .section-project .card .card-title {
+    margin-top: 2rem;
+  }
+  .section-project .card .card-content {
+    margin: 1rem 0;
+  }
+  .section-project .card .card-button {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .section-project .card {
+    padding: 0;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .section-project .card .card-button {
+    max-width: 70%;
+  }
+}
+.section-about .about-img {
+  padding: 4rem;
+  background-color: #f8f6e1;
+}
+.section-about .about-img img {
+  width: 100%;
+}
+.section-about .about-text {
+  padding: 4rem;
+  background-color: #ffaead;
+}
+.section-about .about-text .about-title {
+  font-family: "Crimson Pro", sans-serif;
+  font-size: 8rem;
+  font-weight: 700;
+}
+.section-about .about-text .about-title span {
+  color: #fff;
+}
+.section-about .about-text .about-content {
+  line-height: 2;
+}
+.section-about .about-text .about-button {
+  margin-top: 2rem;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  letter-spacing: 5px;
+  font-weight: 600;
+  max-width: 40%;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.25s ease-in-out;
+}
+.section-about .about-text .about-button:hover {
+  background-color: #033b07;
+}
+
+@media screen and (max-width: 576px) {
+  .section-about .about-img {
+    padding: 1rem;
+    background-color: #f8f6e1;
+  }
+  .section-about .about-img img {
+    width: 100%;
+  }
+  .section-about .about-text {
+    padding: 4rem;
+    background-color: #ffaead;
+  }
+  .section-about .about-text .about-title {
+    font-size: 4rem;
+  }
+  .section-about .about-text .about-button {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .section-about .about-text .about-button {
+    max-width: 50%;
+  }
+}
+.section-social {
+  padding: 4rem;
+}
+.section-social .social-header {
+  font-family: "Crimson Pro", sans-serif;
+  color: #000;
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 700;
+}
+.section-social p {
+  text-align: center;
+  line-height: 2;
+}
+.section-social p a {
+  color: #1caeb5;
+}
+.section-social .social-group {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+}
+.section-social .social-group img {
+  width: 50%;
+}
+.section-social .social-group p {
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-family: "Crimson Pro", sans-serif;
+}
+
+@media screen and (max-width: 576px) {
+  .section-social {
+    padding: 1rem;
+  }
+  .section-social .social-header {
+    font-family: "Crimson Pro", sans-serif;
+    color: #000;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  .section-social p {
+    text-align: center;
+    line-height: 2;
+  }
+  .section-social p a {
+    color: #1caeb5;
+  }
+  .section-social .social-group {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .section-social .social-group img {
+    width: 40%;
+  }
+  .section-social .social-group p {
+    font-weight: 700;
+    font-size: 1.4rem;
+    font-family: "Crimson Pro", sans-serif;
+  }
+}
+.footer {
+  padding: 4rem;
+  border-top: 2px solid #000;
+}
+.footer .footer-logo {
+  width: 50px;
+}
+.footer .navbar-list {
+  letter-spacing: 5px;
+}
+.footer .navbar-list .navbar-item {
+  list-style-type: none;
+}
+.footer .navbar-list .navbar-item + .navbar-item {
+  margin-top: 1.5rem;
+}
+.footer .footer-description {
+  text-align: end;
+}
+.footer .footer-description a {
+  color: #1caeb5;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 1rem;
+    text-align: center;
+  }
+  .footer .footer-logo {
+    width: 50px;
+    margin-bottom: 1rem;
+  }
+  .footer .navbar-list {
+    padding-left: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .footer .navbar-list .navbar-item + .navbar-item {
+    margin-top: 1.5rem;
+  }
+  .footer .footer-description {
+    text-align: center;
+    line-height: 2;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

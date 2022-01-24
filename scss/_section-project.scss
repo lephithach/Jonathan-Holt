@@ -1,0 +1,110 @@
+.section-project {
+  //   padding: $paddingSection;
+  padding: 4rem 3rem;
+
+  .title {
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: "Crimson Pro", sans-serif;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .card {
+    border: none;
+    padding: 0 1rem; //padding same width full section
+
+    .card-img {
+      width: 100%;
+    }
+
+    .card-title {
+      font-family: "Crimson Pro", sans-serif;
+      font-weight: 700;
+      font-size: 38px;
+      margin-top: 2.5rem;
+    }
+
+    .card-description {
+      font-weight: 300;
+    }
+
+    .card-content {
+      line-height: 2;
+      margin: 2rem 0;
+    }
+
+    .card-button {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem 1rem;
+      max-width: 50%;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-align: center;
+      border-radius: 5px;
+      transition: background-color 0.25s ease-in-out;
+
+      &:hover {
+        background-color: #033b07;
+      }
+    }
+
+    .card-show-more {
+      margin-top: 2rem;
+      font-weight: 300;
+      text-decoration: solid;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-project {
+    padding: $paddingSection576px;
+
+    .title {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      padding: 0;
+      margin-top: 1rem;
+
+      .card-img {
+        width: 100%;
+      }
+
+      .card-title {
+        margin-top: 2rem;
+      }
+
+      .card-content {
+        margin: 1rem 0;
+      }
+
+      .card-button {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section-project {
+    .card {
+      padding: 0;
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .section-project {
+    .card {
+      .card-button {
+        max-width: 70%;
+      }
+    }
+  }
+}
